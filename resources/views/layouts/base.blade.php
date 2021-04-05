@@ -116,7 +116,7 @@
 					<div class="mid-section main-info-area">
 
 						<div class="wrap-logo-top left-section">
-							<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logo.jpg') }}" alt="All Organic" width="60%"></a>
+							<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logo.png') }}" alt="All Organic" width="60%"></a>
 						</div>
 
 						@livewire('header-search-component')
