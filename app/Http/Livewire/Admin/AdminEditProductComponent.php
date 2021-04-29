@@ -53,6 +53,20 @@ class AdminEditProductComponent extends Component
 
     public function updateProduct()
     {
+        $this->validate([
+            'name' =>'required',
+            'slug' =>'required|unique:products',
+            'short_description' =>'required',
+            'description' =>'required',
+            'regular_price' =>'required|numeric',
+            'sale_price' =>'numeric',
+            'SKU' =>'required',
+            'stock_status' =>'required',
+            'quantity' =>'required|numeric',
+            'image' =>'required|mimes:jpg,png',
+            'category_id' =>'required'
+        ]);
+
         $product = Product::find($this->product_id);
 
         $product->name = $this->name;

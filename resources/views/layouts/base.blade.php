@@ -48,7 +48,7 @@
 							<ul>
 								
 								<li class="menu-item lang-menu menu-item-has-children parent">
-									<a title="English" href="#"><span class="img label-before"><img src="assets/images/lang-fra.png" alt="lang-fr"></span>Francais<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<a title="Francais" href="#"><span class="img label-before"><img src="assets/images/lang-fra.png" alt="lang-fr"></span>Francais<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 
 								</li>
 								<li class="menu-item menu-item-has-children parent" >
@@ -113,16 +113,21 @@
 				</div>
 
 				<div class="container">
-					<div class="mid-section main-info-area">
+					<div class="mid-section main-info-area" style="background-color:#000 ;">
 
+<<<<<<< Updated upstream
 						<div class="wrap-logo-top left-section">
 							<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logo.png') }}" alt="All Organic" width="60%"></a>
+=======
+						<div class="wrap-logo-top left-section"  >
+							<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logo.png') }}" alt="All Organic" style="border-radius: 10px; height: 200px;"></a>
+>>>>>>> Stashed changes
 						</div>
 
 						@livewire('header-search-component')
 
 						<div class="wrap-icon right-section">
-							<div class="wrap-icon-section wishlist">
+							<!-- <div class="wrap-icon-section wishlist">
 								<a href="#" class="link-direction">
 									<i class="fa fa-heart" aria-hidden="true"></i>
 									<div class="left-info">
@@ -130,18 +135,8 @@
 										<span class="title">Wishlist</span>
 									</div>
 								</a>
-							</div>
-							<div class="wrap-icon-section minicart">
-								<a href="/cart" class="link-direction">
-									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
-									<div class="left-info">
-										@if(Cart::count()>0)
-										<span class="index">{{Cart::count()}} items</span>
-										@endif
-										<span class="title">PANIER</span>
-									</div>
-								</a>
-							</div>
+							</div> -->
+							@livewire('cart-count-component')
 							<div class="wrap-icon-section show-up-after-1024">
 								<a href="#" class="mobile-navigation">
 									<span></span>
@@ -154,28 +149,12 @@
 					</div>
 				</div>
 
-				<div class="nav-section header-sticky">
-					<!-- <div class="header-nav-section">
-						<div class="container">
-							<ul class="nav menu-nav clone-main-menu" id="mercado_haead_menu" data-menuname="Sale Info" >
-								<li class="menu-item"><a href="#" class="link-term">Weekly Featured</a><span class="nav-label hot-label">hot</span></li>
-								<li class="menu-item"><a href="#" class="link-term">Hot Sale items</a><span class="nav-label hot-label">hot</span></li>
-								<li class="menu-item"><a href="#" class="link-term">Top new items</a><span class="nav-label hot-label">hot</span></li>
-								<li class="menu-item"><a href="#" class="link-term">Top Selling</a><span class="nav-label hot-label">hot</span></li>
-								<li class="menu-item"><a href="#" class="link-term">Top rated items</a><span class="nav-label hot-label">hot</span></li>
-							</ul>
-						</div>
-					</div> -->
-
 					<div class="primary-nav-section">
 						<div class="container">
 							<ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
 								<li class="menu-item home-icon">
 									<a href="/" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
 								</li>
-								<!-- <li class="menu-item">
-									<a href="about-us.html" class="link-term mercado-item-title">About Us</a>
-								</li> -->
 								<li class="menu-item">
 									<a href="/shop" class="link-term mercado-item-title">Produits</a>
 								</li>
@@ -198,7 +177,6 @@
     {{ $slot }}
 	<footer id="footer">
 		<div class="wrap-footer-content footer-style-1">
-
 			<div class="wrap-function-info">
 				<div class="container">
 					<ul>
@@ -206,15 +184,7 @@
 							<i class="fa fa-truck" aria-hidden="true"></i>
 							<div class="wrap-left-info">
 								<h4 class="fc-name">Free Shipping</h4>
-								<p class="fc-desc">Free On Oder Over 1000 dhs</p>
-							</div>
-
-						</li>
-						<li class="fc-info-item">
-							<i class="fa fa-recycle" aria-hidden="true"></i>
-							<div class="wrap-left-info">
-								<h4 class="fc-name">Guarantee</h4>
-								<p class="fc-desc">30 Days Money Back</p>
+								<p class="fc-desc">Livraison gratuites pour les commandes depassant 5000 dhs</p>
 							</div>
 
 						</li>
@@ -226,25 +196,14 @@
 							</div>
 
 						</li>
-						<li class="fc-info-item">
-							<i class="fa fa-life-ring" aria-hidden="true"></i>
-							<div class="wrap-left-info">
-								<h4 class="fc-name">Online Suport</h4>
-								<p class="fc-desc">We Have Support 24/7</p>
-							</div>
-
-						</li>
 					</ul>
 				</div>
 			</div>
 			<!--End function info-->
 
 			<div class="main-footer-content">
-
 				<div class="container">
-
 					<div class="row">
-
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Contact Details</h3>
@@ -253,15 +212,15 @@
 										<ul>
 											<li>
 												<i class="fa fa-map-marker" aria-hidden="true"></i>
-												<p class="contact-txt">45 Grand Central Terminal New York,NY 1017 United State USA</p>
+												<p class="contact-txt">MAROC</p>
 											</li>
 											<li>
 												<i class="fa fa-phone" aria-hidden="true"></i>
-												<p class="contact-txt">(+123) 456 789 - (+123) 666 888</p>
+												<p class="contact-txt">(+212) 666 666 666 - (+212) 666 777 888</p>
 											</li>
 											<li>
 												<i class="fa fa-envelope" aria-hidden="true"></i>
-												<p class="contact-txt">Contact@yourcompany.com</p>
+												<p class="contact-txt">Contact@allorganic.com</p>
 											</li>											
 										</ul>
 									</div>
@@ -276,7 +235,7 @@
 								<div class="item-content">
 									<div class="wrap-hotline-footer">
 										<span class="desc">Call Us toll Free</span>
-										<b class="phone-number">(+123) 456 789 - (+123) 666 888</b>
+										<b class="phone-number">(+212) 666 666 666 - (+212) 666 777 888</b>
 									</div>
 								</div>
 							</div>
@@ -297,8 +256,8 @@
 
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 box-twin-content ">
 							<div class="row">
-								<div class="wrap-footer-item twin-item">
-									<h3 class="item-header">My Account</h3>
+								 <div class="wrap-footer-item twin-item">
+								<!--	<h3 class="item-header">My Account</h3>
 									<div class="item-content">
 										<div class="wrap-vertical-nav">
 											<ul>
@@ -309,7 +268,7 @@
 												<li class="menu-item"><a href="#" class="link-term">Wish list</a></li>
 											</ul>
 										</div>
-									</div>
+									</div> -->
 								</div>
 								<div class="wrap-footer-item twin-item">
 									<h3 class="item-header">Infomation</h3>
@@ -332,16 +291,7 @@
 
 					<div class="row">
 
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-							<div class="wrap-footer-item">
-								<h3 class="item-header">We Using Safe Payments:</h3>
-								<div class="item-content">
-									<div class="wrap-list-item wrap-gallery">
-										<img src="assets/images/payment.png" style="max-width: 260px;">
-									</div>
-								</div>
-							</div>
-						</div>
+
 
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
@@ -360,7 +310,7 @@
 							</div>
 						</div>
 
-						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+						<!-- <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Dowload App</h3>
 								<div class="item-content">
@@ -372,7 +322,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 					</div>
 				</div>
@@ -432,7 +382,7 @@
 			<div class="coppy-right-box">
 				<div class="container">
 					<div class="coppy-right-item item-left">
-						<p class="coppy-right-text">Copyright © 2020 Surfside Media. All rights reserved</p>
+						<p class="coppy-right-text">Copyright © 2021 AllOrganic . All rights reserved</p>
 					</div>
 					<div class="coppy-right-item item-right">
 						<div class="wrap-nav horizontal-nav">
