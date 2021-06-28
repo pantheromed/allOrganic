@@ -38,7 +38,6 @@ class DetailsComponent extends Component
         
     }
 
-
     public function render()
     {
         $product = Product::where('slug', $this->slug)->first();

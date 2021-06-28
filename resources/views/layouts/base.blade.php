@@ -79,6 +79,9 @@
 														<a title="Manage sale" href="{{route('admin.sale')}}"> Solde</a>
 													</li>
 													<li class="menu-item">
+														<a title="coupons" href="{{route('admin.coupons')}}"> Coupons</a>
+													</li>
+													<li class="menu-item">
 															<a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 													</li>
 													<form id="logout-form" action="{{route('logout')}}" method="POST">
@@ -91,7 +94,7 @@
 												<a title="My Account" href="{{ route('user.dashboard') }}">Mon Compte {{ Auth::user()->name }}<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 												<ul class="submenu curency" >
 													<li class="menu-item" >
-														<a title="Dashboard" href="{{ route('user.dashboard ') }}">Dashboard</a>
+														<a title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
 													</li>
 													<li class="menu-item">
 															<a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -115,27 +118,15 @@
 				<div class="container">
 					<div class="mid-section main-info-area" style="background-color:#000 ;">
 
-<<<<<<< Updated upstream
-						<div class="wrap-logo-top left-section">
-							<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logo.png') }}" alt="All Organic" width="60%"></a>
-=======
 						<div class="wrap-logo-top left-section"  >
 							<a href="/" class="link-to-home"><img src="{{ asset('assets/images/logo.png') }}" alt="All Organic" style="border-radius: 10px; height: 200px;"></a>
->>>>>>> Stashed changes
 						</div>
 
 						@livewire('header-search-component')
 
 						<div class="wrap-icon right-section">
-							<!-- <div class="wrap-icon-section wishlist">
-								<a href="#" class="link-direction">
-									<i class="fa fa-heart" aria-hidden="true"></i>
-									<div class="left-info">
-										<span class="index">0 item</span>
-										<span class="title">Wishlist</span>
-									</div>
-								</a>
-							</div> -->
+							@livewire('wishlist-count-component')
+
 							@livewire('cart-count-component')
 							<div class="wrap-icon-section show-up-after-1024">
 								<a href="#" class="mobile-navigation">
